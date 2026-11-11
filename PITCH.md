@@ -92,6 +92,36 @@ The official hackathon, game jam, and demo day pitch playbook for **LAST LOGIN v
 
 ---
 
+## 🎮 5 Killer Gameplay Mechanics to Highlight
+
+### 1. 🤖 The Deception Engine (Catching the AI in a Lie)
+* **What it is:** The in-game AI companion (**ASSIST**) actively lies to frame an innocent suspect.
+* **The Mechanic:** The AI has a dynamic visual orb that shifts expressions based on its internal state (*Friendly → Lying → Panicking*). Players present collected evidence to flag contradictions. Catching 3 lies causes a **Critical Logic Overflow**, unlocking **Safe Mode** where the uncorrupted AI turns into your whistleblower.
+
+### 2. 💻 Simulated Operating System (NirvanaOS)
+* **What it is:** A fully interactive desktop environment running natively in the browser.
+* **The Mechanic:** Window management with real-time multitasking (drag, minimize, maximize, snap). Players navigate across **Files**, **Mail**, **Chat**, **Browser**, and **Case Board** apps just like a real cybersecurity forensic analyst.
+
+### 3. 🔍 Active Digital Forensics & File Hacking
+* **What it is:** Real investigative puzzles, not just reading static text.
+* **The Mechanics:**
+  * **File Buffer Recovery:** A corrupted file (`meera_notes.tmp`) must be renamed to `.txt` to view raw memory logs.
+  * **Timestamp Cross-Referencing:** Cross-checking Chat timestamps against System Logs to bust fake alibis (e.g., hospital ER receipt stamped 11:15 PM vs. alleged server sabotage at 11:15 PM).
+  * **Log-Derived Passcodes:** Inspecting security door badge logs (`23:47:33`) to deduce the 4-digit PIN (**`1147`**) for the encrypted vault.
+
+### 4. 🔀 "Tab Hopper" AI Sabotage Mechanic
+* **What it is:** The AI actively tries to stop you from finding the truth while browsing.
+* **The Mechanic:** When you navigate to Dr. Meera’s private search history regarding the offshore shell company, ASSIST triggers an emergency popup to divert your attention toward fake leads. You must dismiss its diversion to extract the proof.
+
+### 5. 🗂️ Interactive Case Board & Branching Accusation
+* **What it is:** An interactive evidence board connecting clues to suspects.
+* **The Mechanic:** Collecting each of the 6 evidence files unlocks a dramatic **retro flashback memory**. In the finale, you enter an interrogation confrontation where you must pick the exact chain of evidence to break the culprit’s defense and trigger the confession.
+
+> **💡 Quick Tip to Tell Judges:**  
+> *"Unlike point-and-click games where clues are handed to you, our mechanics treat the player like a real digital forensics investigator cross-referencing timestamps, decrypting vaults, and hacking past a rogue AI."*
+
+---
+
 ## 🎯 Pro-Tips for Delivering to Judges
 
 1. **Keep the Pace Fast:** Don't linger on reading every email. Highlight the **receipt timestamp (11:15 PM)** and the **vault code (1147)** quickly.
