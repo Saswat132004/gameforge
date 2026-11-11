@@ -4,7 +4,28 @@ The official hackathon, game jam, and demo day pitch playbook for **LAST LOGIN v
 
 ---
 
-## ⏱️ Quick Pitch Breakdown (3–4 Minute Presentation)
+## ⚡ Ultra-Short 60-Second Lightning Pitch (Memorize This)
+
+### 🚀 1. The Hook (10 seconds)
+> *"Judges, imagine investigating a midnight disappearance where the victim’s laptop is left running on an abandoned riverbank. Welcome to **LAST LOGIN v2** — a neo-noir cyber-detective thriller played entirely inside a compromised operating system."*
+
+### 💡 2. The Core Concept (20 seconds)
+> *"Most detective games give you an AI helper that tells the truth. In our game, **the AI assistant (ASSIST) has been hacked by the killer to lie to you and frame an innocent colleague.** Your job as Inspector Arya is to use real digital forensics—files, system logs, chat receipts, and browser history—to catch the AI in a lie, force it into Safe Mode, and unmask the real killer."*
+
+### 🎮 3. What to Show on Screen (20 seconds)
+1. **The 4K Title Screen**: Press Enter (Alan Wake-style double-exposure vector art with dynamic volumetric fog).
+2. **The Forensics**: Open Files, find the encrypted logs, and cross-reference Tanvi's hospital receipt to prove the AI lied.
+3. **The Climax**: Break the AI with evidence, get passcode **`1147`**, unlock the private vault, and arrest **CEO Kabir Nayak**.
+
+### 🛠️ 4. Tech Stack (10 seconds)
+- **100% Pure Vanilla Web Standards**: Pure HTML5, CSS3, & Vanilla JavaScript (ES Modules). Zero bloated frameworks (No React, No Unity).
+- **Graphics**: Inline Vector SVG with double-exposure masking + 60 FPS Canvas particle mist.
+- **Audio**: Native Web Audio API procedural sound engine (sub-bass binaural drones & SFX).
+- **Performance**: Loads in under 50ms, fully offline-ready, buttery 60+ FPS on any device.
+
+---
+
+## ⏱️ Extended Pitch Breakdown (3–4 Minute Presentation)
 
 | Section | Time | Objective |
 | :--- | :--- | :--- |
