@@ -57,9 +57,9 @@ export function createTitleScene(onSelectAction, payload = {}) {
           <span>GAME OPTIONS &amp; SETTINGS</span>
         </button>
 
-        <button class="title-menu-item" id="btn-menu-credits" role="menuitem">
+        <button class="title-menu-item" id="btn-menu-howtoplay" role="menuitem">
           <span class="menu-dot"></span>
-          <span>CASE CREDITS</span>
+          <span>HOW TO PLAY</span>
         </button>
       </nav>
     </div>
@@ -139,22 +139,37 @@ export function createTitleScene(onSelectAction, payload = {}) {
       </div>
     </div>
 
-    <!-- Credits Modal -->
-    <div id="credits-modal" class="hidden" style="position: absolute; inset: 0; background: rgba(5, 8, 14, 0.95); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 24px; backdrop-filter: blur(8px);">
-      <div style="max-width: 520px; background: #141B2D; border: 1px solid var(--color-cyan); padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-glow-cyan);">
-        <h3 style="font-family: var(--font-mono); color: var(--color-cyan); margin-bottom: 12px; font-size: 16px;">LAST LOGIN v2 // CASE DOSSIER</h3>
-        <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-main); margin-bottom: 12px;">
-          Created as an original character-driven detective mystery inside a deceptive retro operating system.
-        </p>
-        <ul style="font-size: 12px; line-height: 1.6; color: var(--color-text-muted); margin-bottom: 16px; padding-left: 18px;">
-          <li>Written &amp; Designed following <code>BUILD.md</code> &amp; <code>DESIGN.md</code> specifications.</li>
-          <li>Characters &amp; Environments: 100% original SVG vector graphics generated in code.</li>
-          <li>Sound: Real-time Web Audio API procedural synthesis. Zero external assets.</li>
-          <li>Canonical Culprit: Kabir Nayak, CEO of Nirvana Labs.</li>
-        </ul>
-        <button id="btn-close-credits" style="background: var(--color-cyan); color: #0B0F1A; font-family: var(--font-mono); font-weight: bold; padding: 6px 16px; border-radius: var(--radius-sm);">
-          CLOSE
-        </button>
+    <!-- How To Play Modal -->
+    <div id="howtoplay-modal" class="hidden" style="position: absolute; inset: 0; background: rgba(5, 8, 14, 0.95); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 24px; backdrop-filter: blur(8px);">
+      <div style="max-width: 580px; width: 100%; background: #141B2D; border: 2px solid var(--color-cyan); padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-glow-cyan);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid rgba(61, 245, 255, 0.25); padding-bottom: 8px;">
+          <h3 style="font-family: var(--font-mono); color: var(--color-cyan); font-size: 16px; font-weight: bold;">
+            🎮 HOW TO PLAY // INVESTIGATOR BRIEFING
+          </h3>
+          <button id="btn-close-howtoplay-x" style="color: var(--color-text-muted); font-size: 18px; background: transparent; cursor: pointer; border: none;">✕</button>
+        </div>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 12px; line-height: 1.6; color: var(--color-text-main);">
+          <div style="padding: 10px; background: rgba(11, 15, 26, 0.7); border-radius: var(--radius-sm); border-left: 3px solid var(--color-cyan);">
+            <strong style="color: var(--color-cyan);">1. Explore NirvanaOS:</strong> Use the simulated desktop apps (Files, Mail, Chat, Browser, Case Board). Drag, minimize, or snap windows to manage your forensic workspace.
+          </div>
+          <div style="padding: 10px; background: rgba(11, 15, 26, 0.7); border-radius: var(--radius-sm); border-left: 3px solid var(--color-amber);">
+            <strong style="color: var(--color-amber);">2. Digital Forensics:</strong> Rename corrupted files (<code>.tmp</code> &rarr; <code>.txt</code>), cross-reference timestamps in emails and chats, and check system logs for door badge swipe times.
+          </div>
+          <div style="padding: 10px; background: rgba(11, 15, 26, 0.7); border-radius: var(--radius-sm); border-left: 3px solid var(--color-red);">
+            <strong style="color: var(--color-red);">3. Cross-Examine ASSIST:</strong> The AI assistant has been reprogrammed to lie. Flag contradictions in the ASSIST app using your collected clues to force it into <strong>Safe Mode</strong> and get the private vault passcode.
+          </div>
+          <div style="padding: 10px; background: rgba(11, 15, 26, 0.7); border-radius: var(--radius-sm); border-left: 3px solid var(--color-green);">
+            <strong style="color: var(--color-green);">4. Crack the Vault & Accuse:</strong> Use the 4-digit code in the <code>PRIVATE</code> folder, retrieve the final evidence, and confront the culprit on the Case Board.
+          </div>
+        </div>
+
+        <div style="margin-top: 18px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 11px; font-family: var(--font-mono); color: var(--color-text-muted);">Controls: [ENTER/SPACE] Advance &bull; [CLICK] Select</span>
+          <button id="btn-close-howtoplay" style="background: var(--color-cyan); color: #0B0F1A; font-family: var(--font-mono); font-weight: bold; padding: 7px 20px; border-radius: var(--radius-sm); cursor: pointer; border: none;">
+            UNDERSTOOD
+          </button>
+        </div>
       </div>
     </div>
   `;
@@ -257,20 +272,27 @@ export function createTitleScene(onSelectAction, payload = {}) {
     }
   });
 
-  // Credits Modal
-  const creditsModal = container.querySelector('#credits-modal');
-  const btnCredits = container.querySelector('#btn-menu-credits');
-  const btnCloseCredits = container.querySelector('#btn-close-credits');
+  // How To Play Modal
+  const howtoplayModal = container.querySelector('#howtoplay-modal');
+  const btnHowToPlay = container.querySelector('#btn-menu-howtoplay');
+  const btnCloseHowToPlay = container.querySelector('#btn-close-howtoplay');
+  const btnCloseHowToPlayX = container.querySelector('#btn-close-howtoplay-x');
 
-  btnCredits.addEventListener('click', () => {
-    audioManager.playKeyTick();
-    creditsModal.classList.remove('hidden');
-  });
+  if (btnHowToPlay && howtoplayModal) {
+    btnHowToPlay.addEventListener('click', () => {
+      audioManager.ensureContext();
+      audioManager.playKeyTick();
+      howtoplayModal.classList.remove('hidden');
+    });
 
-  btnCloseCredits.addEventListener('click', () => {
-    audioManager.playKeyTick();
-    creditsModal.classList.add('hidden');
-  });
+    const closeHowToPlay = () => {
+      audioManager.playKeyTick();
+      howtoplayModal.classList.add('hidden');
+    };
+
+    if (btnCloseHowToPlay) btnCloseHowToPlay.addEventListener('click', closeHowToPlay);
+    if (btnCloseHowToPlayX) btnCloseHowToPlayX.addEventListener('click', closeHowToPlay);
+  }
 
   // If payload requested showing options directly
   if (payload.showOptions) {
