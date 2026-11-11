@@ -3,7 +3,7 @@
 import { gameState } from './game-state.js';
 import { audioManager } from './audio-manager.js';
 import { createLandingScene } from '../scenes/LandingScene.js';
-import { createTitleScene } from '../scenes/TitleScene.js?v=2.1';
+import { createTitleScene } from '../scenes/TitleScene.js?v=2.2';
 import { createVideoPrologueScene } from '../scenes/VideoPrologueScene.js';
 import { createRiverbankScene } from '../scenes/RiverbankScene.js';
 import { createBriefingScene } from '../scenes/BriefingScene.js';

@@ -19,7 +19,7 @@ export function createTitleScene(onSelectAction, payload = {}) {
     <div class="title-header">
       <div class="title-subtag">CASE // BHUBANESWAR SPECIAL FORENSICS</div>
       <h1 class="title-main">
-        LAST LOGIN<span class="title-version">v2</span>
+        LAST LOGIN
       </h1>
       <p class="title-tagline">
         DR. MEERA SAHOO DISAPPEARED INTO THE CODE AT MIDNIGHT.<br/>
